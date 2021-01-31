@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    background-color:#0d0d1d;
+}
+main canvas {
+    border: 3px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50px;
+}
+#leftbar {
+    padding: 20px;
+}
+.save {
+    font-family: 'Potta One', cursive;
+    background-color: green;
+    border: 1px solid white;
+    color: white;
+    padding: 3px;
+    font-size: 25px;
+    transition: 0.1s ease;
+}
+.reset {
+    font-family: 'Potta One', cursive;
+    background-color: red;
+    border: 1px solid white;
+    color: white;
+    padding: 3px;
+    font-size: 25px;
+    transition: 0.1s ease;
+}
+.tool {
+    font-size: 30px;
+    border: 3px aliceblue solid;
+    padding: 3px;
+    transition: 0.1s ease;
+    background-color: white;
+}
+.tool:hover {
+    background-color: aliceblue;
+    transform: scale(1.2);
+}
+#rightbar {
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    font-size: 25px;
+}
+.reset:hover {
+    transform: scale(1.1);
+}
+.save:hover {
+    transform: scale(1.1);
+}
+.lowerTools {
+    margin-top: 30px;
+}
+#fontInput {
+    font-size: 20px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+#textToolInput {
+    font-size: 20px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+#colorInput {
+    border: 1px solid black;
+    overflow: hidden;
+    background-color: aliceblue;
+    color: aliceblue;
+    transition: 0.1s ease;
+}
+#colorInput:hover {
+    transform: scale(1.2);
+}
+@media(max-width: 600px) {
+    #drawingArea {
+        width: 500px;
+        height: 400px;
+    }
+}
+.border {
+    border-right: 1px solid black;
+    animation: anim 0.5s infinite;
+}
+
+@keyframes anim {
+    0% {
+        border-color: black;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: black;
+    }
+}

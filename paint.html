@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="swal/dist/sweetalert2.css">
+    <script src="https://kit.fontawesome.com/71ecc900fa.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <title>Paint</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <main>
+            <canvas id="drawingArea" width="800px" height="600px"></canvas>
+        </main>
+
+        <section id="leftbar">
+            <div id="tools">
+                <i id="drawingTool" class="fas fa-paint-brush tool"></i>
+                <i id="textTool" class="fas fa-font tool"></i> 
+                <input type="color" id="colorInput" onfocusout="changeColor()">
+                <div class="lowerTools"> <br />
+                    <i><input id="textToolInput" placeholder="Type text to add"></i><br />
+                    <input type="number" placeholder="text size in px" onfocusout="changeFont()" id="fontInput">
+
+                </div>
+            </div>
+        </section>
+        <section id="rightbar">
+            <button class="save">Save</button>
+            <button class="reset">Reset</button>
+        </section>
+    <script src="swal/dist/sweetalert2.js"></script>
+    <script src="paint.js"></script>
+    <script src="notif.js"></script>
+    </body>
+
+</html>
